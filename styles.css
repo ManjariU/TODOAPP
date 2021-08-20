@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Tangrine', sans-serif;
+}
+
+.container {
+    margin: 50px auto;
+    max-width: 1200px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    min-height:200px;
+    font-size: 40px;
+}
+
+.head-title {
+    padding: 10px;
+    font-size: 50px;
+}
+
+#task {
+    display: inline-block;
+    font-weight: bolder;
+}
+
+#lists {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: lighter;
+}
+
+.head-title.inactive {
+    display:none;
+}
+
+.add-list {
+    max-width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+.add-list:active {
+    font-size: 39px;
+    transition: 0.2s;
+}
+
+.add-list.inactive{
+    visibility: hidden;
+}
+
+.icon {
+    color: #E74C3C;
+    margin-right: 10px;
+}
+
+.backBtn{
+    display:none;
+}
+
+.backBtn.active {
+   max-width: 200px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   font-size: 40px;
+   cursor: pointer;
+}
+
+.iconBack {
+    color:rgb(37, 37, 248);
+    margin-right: 10px;
+}
+
+.card-heading{
+    visibility: hidden;
+}
+
+.card-heading.active{
+    font-size: 40px;
+    font-weight: 600;
+    visibility:visible;
+    align-self: center;
+    margin:0 auto;
+    word-wrap: break-word;
+    align-self: center;
+}
+
+.card-section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+}
+
+.card {
+    padding: 10px;
+    position: relative;
+    min-width: 230px;
+    border: 0.5px solid#E74C3C;
+    box-shadow: 0px 0px 10px rgb(172, 170, 170);
+    border-radius: 12px;
+    margin: 30px;
+    line-height: 30px;
+}
+
+.card:hover{
+    box-shadow: 4px 4px 15px rgb(172, 170, 170);
+    transition: box-shadow 0.2s ease;
+}
+.card-title{
+    cursor:pointer;
+    max-height:200px;
+}
+.card-title p {
+    font-size: 30px;
+    text-align: center;
+    font-weight: lighter;
+    color: #E74C3C; 
+    word-wrap: break-word;
+}
+
+.icon2 {
+    margin-right: 10px;
+}
+
+.pop1,.pop2 {
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 380px;
+    height: 220px;
+    border: 2px solid #E74C3C;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px grey;
+}
+
+.pop-text {
+    margin-top: 0;
+    font-size: 28px;
+    color: #E74C3C;
+}
+
+.pop1.active, .pop2.active  {
+    visibility: visible;
+}
+
+.container#blur.active {
+    filter: blur(10px);
+    pointer-events: none;
+    user-select: none;
+}
+
+#inputfield1,#inputfield2  {
+    width: 300px;
+    height: 50px;
+    margin-bottom: 20px;
+    border: 2px solid #E74C3C;
+    border-radius: 5px;
+    text-align: center;
+    font-size:0.9em;
+}
+
+#inputfield1:active, #inputfield2:active  {
+    border: 2px solid black;
+}
+
+.options button {
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    background-color: #E74C3C;
+    border: none;
+    color: #fff;
+    font-size: 28px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.cardbutton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.cardbutton .add-item{
+    padding:5px;
+    cursor: pointer;
+}
+
+.cardbutton .delete-card {
+    color: rgb(37, 37, 248);
+    padding:5px;
+    cursor: pointer;
+}
+
+.list-container {
+    min-height: 180px;
+    padding-right:15px;
+}
+
+.list-style {
+    list-style:none;
+}
+
+.list-items {
+    font-size: 15px;
+    display: inline;
+}
+
+.mark-done {
+    display: inline;
+    margin-left: 5px;
+    background-color: rgb(37, 125, 226);
+    font-size: 10px;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+
+.edit-button{
+    display: inline;
+    margin-left: 5px;
+    background-color: rgb(37, 125, 226);
+    font-size: 10px;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mark-done p {
+    display: inline;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .header {
+        font-size: 21px;
+    }
+
+    .head-title{
+        font-size: 30px;
+        align-self: center;
+    }
+
+    .add-list {
+        justify-content: flex-end;
+    }
+
+    .pop1,.pop2 {
+        width: 300px;
+        height: 180px;
+    }
+
+    .pop-text{
+        font-size:18px;
+    }
+
+    #inputfield1,#inputfield2{
+        width:200px;
+        height: 30px;
+        font-size:0.6em;
+    }
+
+    .options button {
+        width: 70px;
+        height: 30px;
+        margin:5px;
+        font-size: 18px;
+    }
+
+    .backBtn.active {
+        font-size: 21px;
+     }
+
+     .card-heading.active{
+        font-size: 25px;
+     }
+     
+     .card-title p {
+         font-size: 20px;
+         text-align: center;
+     }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/fc3420a326.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,100;1,200&display=swap" rel="stylesheet">
+    <title>ToDo App</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="container" id="blur">
+        <div class="header">
+            <div class="head-title">
+                <p id="task">Task </p>
+                <p id="lists">Lists</p>
+            </div>
+            <div class="backBtn" onclick="backFunction(event)">
+                <div class="iconBack">
+                    <i class="fas fa-arrow-circle-left"></i>
+                </div>
+                <div class="back">
+                    <p>Back</p>
+                </div>
+            </div>
+            <div class="card-heading">
+
+            </div>
+            <div class="add-list" onclick="toggle1()">
+                <div class="icon">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <div class="add">
+                    <p>Add List</p>
+                </div>
+            </div>
+        </div>
+        <div class="card-section">
+        </div>
+    </div>
+
+    <!-- To add new card -->
+    <div class="pop1">
+        <p class="pop-text">Add New List</p>
+        <input type="text" id="inputfield1" onfocus="this.value=''" placeholder="Add New List" autocomplete="off">
+        <div class="options">
+            <button class="add" onclick="addToDoCard()">Add</button>
+            <button class="close" onclick="toggle1()">Close</button>
+        </div>
+    </div>
+
+    <!-- To add new List -->
+    <div class="pop2">
+        <p class="pop-text">Add New Item</p>
+        <input type="text" id="inputfield2" onfocus="this.value=''" placeholder="Add New List" autocomplete="off">
+        <div class="options">
+            <button class="add" onclick="addListItem(list)">Add</button>
+            <button class="close" onclick="toggle2()">Close</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
